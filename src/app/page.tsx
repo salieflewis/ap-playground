@@ -1,11 +1,12 @@
-'use client'
+'use client';
 
-import { Header } from '../components'
+import { Header, Playground } from '../components';
 
 export default function Page() {
   return (
     <>
       <Header />
+      <Playground />
     </>
-  )
+  );
 }
