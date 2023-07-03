@@ -1,2 +1,2 @@
 export * from './getContractAbi'
-export * from './shortenAddress'
+export * from './shortenAddress';

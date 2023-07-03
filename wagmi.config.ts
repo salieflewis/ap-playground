@@ -1,23 +1,21 @@
-import { defineConfig } from '@wagmi/cli';
-import { etherscan, react } from '@wagmi/cli/plugins';
+import { defineConfig, loadEnv } from '@wagmi/cli';
+import { react } from '@wagmi/cli/plugins';
 import { sepolia } from 'wagmi/chains';
+import { getContractAbi } from './src/utils';
 
-export default defineConfig({
-  out: 'src/generated.ts',
-  contracts: [],
-  plugins: [
-    etherscan({
-      apiKey: process.env.ETHERSCAN_API_KEY!,
-      chainId: sepolia.id,
-      contracts: [
-        {
-          name: 'EnsRegistry',
-          address: {
-            [sepolia.id]: '0x112234455c3a32fd11230c42e7bccd4a84e02010',
-          },
+export default defineConfig(async () => {
+  const { abi } = await getContractAbi();
+  return {
+    out: 'src/generated.ts',
+    contracts: [
+      {
+        abi: abi,
+        address: {
+          [sepolia.id]: '0xDdBB6815B0BD76b2F31766737C6D0b51c6ab2935',
         },
-      ],
-    }),
-    react(),
-  ],
+        name: 'ERC721Press',
+      },
+    ],
+    plugins: [react()],
+  };
 });
