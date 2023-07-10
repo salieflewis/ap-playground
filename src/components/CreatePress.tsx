@@ -1,3 +1,5 @@
+'use client'
+
 import { Hex } from 'viem';
 import { useCreate721Press } from '../hooks/useCreate721Press';
 import { useAccount } from 'wagmi';
