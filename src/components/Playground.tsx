@@ -41,5 +41,5 @@ export async function Playground() {
 
   console.log(merkleRoot);
 
-  return <main></main>;
+  return <main />;
 }
