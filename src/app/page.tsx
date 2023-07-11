@@ -1,4 +1,4 @@
-import { Header, CreatePress, CreateRoot, Playground } from '../components';
+import { Header, CreatePress, CreateRoot } from '../components';
 
 export default function Page() {
   return (
@@ -9,10 +9,9 @@ export default function Page() {
         className='flex items-center justify-center'
       >
         <div className='flex gap-2'>
-          {/* <CreatePress /> */}
-          {/* <CreateRoot /> */}
+          <CreatePress />
+          <CreateRoot />
         </div>
-        <Playground />
       </main>
     </>
   );
