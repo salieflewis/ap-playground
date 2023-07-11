@@ -1,7 +1,4 @@
-'use client';
-
-import { Header, CreatePress } from '../components';
-// import { Playground } from '../components/Playground';
+import { Header, CreatePress, CreateRoot } from '../components';
 
 export default function Page() {
   return (
@@ -11,9 +8,10 @@ export default function Page() {
         style={{ height: 'calc(100vh - 72px)' }}
         className='flex items-center justify-center'
       >
-        <CreatePress />
-
-        {/* <Playground /> */}
+        <div className='flex gap-2'>
+          <CreatePress />
+          <CreateRoot />
+        </div>
       </main>
     </>
   );

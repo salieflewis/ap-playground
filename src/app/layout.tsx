@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   title: 'Public Assembly - Caisson',
 };
 
+
+/**
+ * @dev The root layout is a Server Component by default and can not be set to a Client Component.
+ */
 export default function RootLayout({
   children,
 }: {
