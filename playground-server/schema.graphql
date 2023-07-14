@@ -1,0 +1,22 @@
+type PressSettings @entity {
+  id: Int! # Represents a unique identifier
+  fundsRecipient: String! # Ethereum address
+  royaltyBPS: Float!
+  transferable: Boolean!
+}
+
+type Press721 @entity {
+  id: Int! # Represents a unique identifier
+  name: String!
+  symbol: String!
+  owner: String! # Ethereum address
+  database: String! # Ethereum address
+  databaseInit: Bytes! # Database initialization data
+  settings: PressSettings!
+}
+
+type Press721Token @entity {
+  id: Int! # Represents a unique identifier
+  tokenId: Int!
+  minter: String! # Ethereum address
+}
