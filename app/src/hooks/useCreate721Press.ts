@@ -27,7 +27,7 @@ export function useCreate721Press({
   };
 
   const { config } = usePrepareContractWrite({
-    address: '0x9F9a2B46d6cd05FCFbC4718Bb58B78f4d3BE37F2',
+    address: '0x6975F5CcD3570dBF460451DC6f49CB7ceED8A369',
     abi: erc721PressFactoryAbi,
     functionName: 'createPress',
     args: [name, symbol, initialOwner, databaseInit, settings],
